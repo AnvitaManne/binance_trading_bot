@@ -1,0 +1,15 @@
+{
+    "BinanceKeys": {
+        "API_Key": "iGVsymtZFeiSBJOTuM7gczbAJudkxiwmHZGve7FvYbDSEYjwQrnrQhi8mgoBEV82",
+        "Secret_Key": "5kg59n3umE6B50YbxE75gjo6hsUpS5MZEkojWZQaXhJdKoAZAYT7hgN46X9r6VBO"
+
+    },
+    "Tokens":
+    {
+        "BUSD": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+        "ETH": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+        "BTCB": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c"
+
+    }
+
+}
