@@ -39,7 +39,35 @@ if __name__=="__main__":
         print(f"Current ratio: {current_ratio}")
         #calculate difference between the ratios
         check=strategy.check_ratio_relation(current_ratio,reference_ratio)
+        asset_list=binance_client.query_quote_asset_list("BTC")
+        eth_pair = asset_list.loc[asset_list["symbol"] == "ETHBTC"]
+
+        if eth_pair.empty:
+            print("Error: ETHBTC pair not found!")
+            exit()  # Stop execution if the pair is not found
+
+        symbol = eth_pair["symbol"].values[0]  # Extract the symbol string
+
         if check:
             print("Buying time")
+            analysis=strategy.analyse_symbols(eth_pair,"1h",0.000001,"buy")
+            if analysis:
+                print("Buying ETH")
+                params=strategy.calculate_buy_params(symbol,eth_pair,"1h")
+                response=binance_client.make_trade_with_params(params,project_settings)
+                print(response)
+            else:
+                print("Not buying ETH")
+                
+
         else:
             print("Selling time")
+            analysis=strategy.analyse_symbols(eth_pair,"1h",0.000001,"sell")
+            if analysis:
+                print("Selling ETH")
+                params=strategy.calculate_sell_params(symbol,eth_pair,"1h")
+                response=binance_client.make_trade_with_params(params,project_settings)
+                print(response)
+            else:
+                print("Not selling ETH")
+                print(f"Reason: The analysis is {analysis}")
