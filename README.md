@@ -1,11 +1,9 @@
+
 # Binance Trading Bot
 
 This project is an automated cryptocurrency trading bot that integrates with the Binance Testnet and Moralis API. It simulates buying and selling tokens based on live price data and trading strategies defined in Python.
 
----
-
 ## Project Structure
-
 ```
 
 binance_trading_bot/
@@ -20,17 +18,12 @@ binance_trading_bot/
 
 ````
 
----
-
 ## Features
-
 - Real-time token price fetching using the Moralis API  
 - Binance Testnet integration for safe simulated trading  
 - Automated trading strategy execution based on market conditions  
 - Dynamic trade parameter calculations using tick size and step size  
 - Modular design for easier debugging and customization  
-
----
 
 ## How It Works
 
@@ -70,8 +63,6 @@ The central controller:
 * Determines whether to buy or sell based on the comparison
 * Executes trades if the analysis conditions are met
 
----
-
 ## Example Execution Flow
 
 1. Start the Flask service:
@@ -102,18 +93,14 @@ The central controller:
    Buying ETH
    ```
 
----
-
 ## Strategy Summary
 
-| Condition                         | Action      | Description                 |
-| --------------------------------- | ----------- | --------------------------- |
-| `current_ratio < reference_ratio` | Buy         | Token appears undervalued   |
-| `current_ratio > reference_ratio` | Sell        | Token appears overvalued    |
-| 3 consecutive green candles       | Buy signal  | Indicates upward momentum   |
-| 3 consecutive red candles         | Sell signal | Indicates downward momentum |
-
----
+| Condition                         | Action      | Description               |
+| --------------------------------- | ----------- | ------------------------- |
+| `current_ratio < reference_ratio` | Buy         | Token appears undervalued |
+| `current_ratio > reference_ratio` | Sell        | Token appears overvalued  |
+| 3 consecutive green candles       | Buy signal  | Indicates upward momentum |
+| 3 consecutive red candles         | Sell signal | Indicates downward trend  |
 
 ## Configuration
 
@@ -139,8 +126,6 @@ MORALIS_API_KEY=your_moralis_api_key_here
 }
 ```
 
----
-
 ## Testing and Output Examples
 
 * Successfully connects to Binance Testnet
@@ -158,14 +143,10 @@ Shows balance of each token
 True at the end confirms Binance Testnet connection
 ```
 
----
-
 ## Notes
 
 * Always use the Binance Testnet keys when testing.
 * The current logic uses a basic price and candle-based pattern strategy.
-
----
 
 ## Requirements
 
@@ -188,13 +169,9 @@ Install them with:
 pip install -r requirements.txt
 ```
 
----
-
 ## Author
 
 **Anvita Manne**
-
----
 
 ## License
 
