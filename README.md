@@ -128,8 +128,8 @@ MORALIS_API_KEY=your_moralis_api_key_here
 ```json
 {
   "BinanceKeys": {
-    "API_Key": "your_binance_testnet_api_key",
-    "Secret_Key": "your_binance_testnet_secret_key"
+    "API_Key": "****",
+    "Secret_Key": "****"
   },
   "Tokens": {
     "BUSD": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
@@ -199,5 +199,3 @@ pip install -r requirements.txt
 ## License
 
 This project is licensed under the MIT License. You are free to use and modify it.
-
-```
